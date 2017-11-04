@@ -22,7 +22,20 @@ let api = {
         })
             .then((response) => response.json())
             .then(function(resJson) {
-                return resJson;
+                url = 'https://api.spotify.com/v1/users/guepen/playlists/6R2tg0RnntCQjAWHI7nyd8';
+                return fetch(url, {
+                    method: 'GET',
+                    headers: {
+                        'Authorization': 'Bearer ' + resJson.access_token,
+                    }
+                })
+                    .then((response) => response.json())
+                    .then(function(resJson) {
+                        return resJson;
+                    })
+                    .catch((error) => {
+                    console.error("Errors: " + error);});
+
         })
             .catch((error) => {
             console.error("Errors: " + error);

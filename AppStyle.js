@@ -3,14 +3,21 @@ const {StyleSheet} = React;
 
 export default StyleSheet.create({
     songText: {
+        width:'85%'
+    },
+    pointText: {
+        marginTop:17,
+        paddingRight:10,
+        textAlign: 'right',
         color: 'blue',
         fontWeight: 'bold',
-        fontSize: 15,
+        fontSize: 20,
+        width:'15%'
     },
     margin: {
         marginTop: 30,
         marginBottom: 30,
-        marginLeft:3,
+        marginLeft:5,
         marginRight:3
     },
     artist: {
@@ -23,4 +30,23 @@ export default StyleSheet.create({
         marginLeft:3,
         marginRight:3
     },
-}); 
+    modalView: {
+        marginTop: 22
+    },
+    radioForm:{
+        alignItems: 'flex-start',
+        marginLeft: 15,
+        height:'94%',
+    },
+    radioFormButton: {
+        marginBottom: 20,
+        fontSize: 20
+    },
+    radioFormLabel: {
+
+        fontSize: 20
+    },
+    closeButton:{
+        height: 100
+    }
+});
